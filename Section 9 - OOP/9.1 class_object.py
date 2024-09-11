@@ -65,15 +65,20 @@ class Bank:
     def __init__(self,accno,balance):
         self.accno = accno
         self.balance = balance
-    
     def deposit(self,amt):
         self.balance += amt
         print(f'Your current balance is {self.balance}')
     def withdraw(self,amt):
         self.balance -= amt
-        print(f'Your current balance is self.balance')
-    
+        print(f'Your current balance is {self.balance}')
     def balance_check(self):
         print(f'You current balance is {self.balance}')
 
 
+
+person  = Bank(1234,23121)
+print(person.accno)
+person.deposit(12000)
+person.withdraw(8799)
+person.withdraw(21)
+person.balance_check()
