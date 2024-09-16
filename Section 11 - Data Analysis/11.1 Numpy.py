@@ -28,3 +28,60 @@ print(arr2.shape)
 arr3 = np.array([[[1,2,3,4,5]]])
 print(arr3)
 print(arr3.ndim)
+
+new = np.arange(0,10).reshape(5,2)
+
+print(new)
+print(new.dtype)
+
+
+# NUMPY VECTORIZED OPERATIONS   
+
+arr4 = np.array([1,2,3,4,5])
+arr5 = np.array([10,20,30,40,50])
+
+# element wise addition
+
+print("Addition: ", arr4 + arr5)
+
+# element wise substraction
+
+print("Addition: ", arr4 - arr5)
+
+# element wise substraction
+
+print("Addition: ", arr4 * arr5)
+
+
+# universal function
+
+# square root
+arr6 = np.array([10,20,30,40,50])
+
+print(np.sqrt(arr6))
+
+# exponential
+print(np.exp(arr6))
+
+# sin
+print(np.sin(arr6))
+
+# natural log
+
+print(np.log(arr6))
+
+
+# array slicing and indexing 
+
+arr7 = np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12]])
+
+print(arr7)
+
+print(arr7[0,0])
+
+
+print(arr7[1:,2:])
+
+print(arr7[0:2,2:])
+
+print(arr7[1:,1:3])
