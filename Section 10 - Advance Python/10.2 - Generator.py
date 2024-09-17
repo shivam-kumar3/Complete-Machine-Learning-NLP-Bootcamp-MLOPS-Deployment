@@ -11,8 +11,8 @@ def square(n):
     
 print(square(3))
 
-# for i in square(3):
-#     print(i)
+for i in square(3):
+    print(i)
 
 
 a = square(10)

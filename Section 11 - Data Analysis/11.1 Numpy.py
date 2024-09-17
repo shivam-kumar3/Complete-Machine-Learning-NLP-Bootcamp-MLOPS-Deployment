@@ -85,3 +85,31 @@ print(arr7[1:,2:])
 print(arr7[0:2,2:])
 
 print(arr7[1:,1:3])
+
+arr7[0,0] = 100
+
+print(arr7)
+
+
+#statistical concepts -  normlization
+
+# to have a mean of 0 and standard deviation of 1 
+
+mean = np.mean(arr7)
+std = np.std(arr7)
+
+nor = (arr7 - mean)/ std
+
+print('Normalized Data :', nor)
+
+'''
+np.mean
+np.median
+np.std
+np.variance
+'''
+
+# Logical operations
+
+print(arr7[(arr7>5) & (arr7 < 10)])
+
