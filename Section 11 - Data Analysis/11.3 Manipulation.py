@@ -22,7 +22,7 @@ print(df.isnull().sum()/df.shape[0]*100)
 
 print(df.shape)
 
-# filling missing values with the mean of the column
+# changing datatypes with fillna
 
-print(df.dtypes)
+# df['value_new'] = df['value'].fillna(df['value'].mean()).astype(int)
 
