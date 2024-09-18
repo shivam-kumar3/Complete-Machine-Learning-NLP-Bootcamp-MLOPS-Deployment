@@ -8,7 +8,7 @@ in this lesson, we will cover various data manipulation and analysis techniques 
 
 import pandas as pd
 
-df = pd.read_csv('data.csv', encoding='latin1')
+df = pd.read_csv('iris.csv')
 print(df.head())
 
 print(df.tail)
@@ -24,13 +24,5 @@ print(df.shape)
 
 # filling missing values with the mean of the column
 
-
-# changing the data type to int from float
-print(df.dtypes)
-df = df.apply(lambda x: x.fillna(0).astype(int) if x.dtype == 'float' else x)
-
 print(df.dtypes)
 
-df['num_voted_users_filled'] = df['num_voted_users'].fillna(df["num_voted_users"].mean())
-
-print(df)
