@@ -25,3 +25,9 @@ print(df)
 df2 = pd.read_excel("NEW.xlsx")
 
 print(df2)
+
+
+# converting a pickle file
+df2.to_pickle('df2')
+
+pd.read_pickle('df2')
