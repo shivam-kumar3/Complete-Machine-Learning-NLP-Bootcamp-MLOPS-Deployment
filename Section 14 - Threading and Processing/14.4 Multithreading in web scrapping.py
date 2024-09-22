@@ -37,3 +37,11 @@ for thread in threads:
     thread.join()
 
 print('All webpages extracted')
+
+'''
+Concurrency:
+
+By using threading, the script can fetch multiple URLs simultaneously, making it more efficient than fetching them one at a time. This is especially useful when dealing with multiple pages, as it can significantly reduce the total time taken to collect data.
+
+
+'''
