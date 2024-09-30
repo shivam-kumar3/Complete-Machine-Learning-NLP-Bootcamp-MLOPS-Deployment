@@ -1,0 +1,9 @@
+1. Introduction - Where we have seen the walkaround of ml
+2. Types of Ml technique - 
+    Supervised - Regression (for Countinuous o/p ) Classification (For Categorical Output)
+    Unsupervised (for clustring no output feature is being given)
+    Reinforcement - (Keep on improving my the given data, keep on learning )
+3. Equation of Line, 3d, Hyperplane 
+4. Distance of a point from a plane 
+5. Instance based vs model based learning 
+    Instance-based learning uses specific examples to make predictions, while model-based learning creates a general rule or model from the data to do the same.
