@@ -7,6 +7,12 @@ menu = {
 }
 
 def MyPlace():
+    '''
+    In this function it will be interactive 
+    you can give your orders and the program will display 
+    the final price
+    
+    '''
     print('''Welcome to MyPlace Cafe\nPlease Order Your Meal
                 Coffee      : 120
                 Sandwich    : 70
