@@ -7,20 +7,22 @@ import os
 LOG_DIR = 'logs'
 LOG_FILE_NAME = 'application.log'
 
-os.mkdir(LOG_DIR, exist_ok= True )
-log_path = os.path_join(LOG_DIR,LOG_FILE_NAME)
+if not os.path.isdir(LOG_DIR):
+    os.mkdir(LOG_DIR)
+
+log_path = os.path.join(LOG_DIR,LOG_FILE_NAME)
 
 logging.basicConfig(
     filename=log_path,
     format= '[%(asctime)s] %(name)s %(levelname)s %(message)s',
-    level = logging.info
+    level = logging.INFO
 )
 
 # taking the male voice from my system
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[2].id)
+engine.setProperty('voice', voices[0].id)
 
 # speak function
 def Speak(text):
@@ -33,11 +35,11 @@ Speak("Hello my name is shivam\n i am a data scientist")
 # taking commands
 
 def takecommands():
-    r = sr.recognizers()
+    r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening.....")
         r.pause_threshold = 1
-        audio = r.litsen(source)
+        audio = r.listen(source)
 
     try:
         print('Recognizing...')
