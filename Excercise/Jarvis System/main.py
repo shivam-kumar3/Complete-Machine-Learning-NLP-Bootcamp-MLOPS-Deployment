@@ -1,5 +1,20 @@
 import speech_recognition as sr
 import pyttsx3
+import logging
+import os
+
+# Logger for the application
+LOG_DIR = 'logs'
+LOG_FILE_NAME = 'application.log'
+
+os.mkdir(LOG_DIR, exist_ok= True )
+log_path = os.path_join(LOG_DIR,LOG_FILE_NAME)
+
+logging.basicConfig(
+    filename=log_path,
+    format= '[%(asctime)s] %(name)s %(levelname)s %(message)s',
+    level = logging.info
+)
 
 # taking the male voice from my system
 
@@ -25,7 +40,14 @@ def takecommands():
         audio = r.litsen(source)
 
     try:
-        pass
-    except Exception as ex:
-        
-        
+        print('Recognizing...')
+        query = r.recognize_google(audio,language = 'en-in')
+        print(f'User Said:{query}\n')
+    except Exception as e:
+        logging.info(e)
+        print("Say that again please")
+        return None
+    return query
+
+text = takecommands()
+print(text)
