@@ -85,6 +85,3 @@ print(factorial(6))
 
 
 #  a function to read a file and count the frequenct of each word
-
-def count_word(file_path):
-    
