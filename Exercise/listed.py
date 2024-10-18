@@ -55,3 +55,20 @@ def fibonacci(n):
 fibonacci_numbers = fibonacci(10)
 print(fibonacci_numbers)
 
+# Write a function named is_prime(n) that takes an integer n as input and returns True if the number is a prime number, and False otherwise.
+
+def is_prime(n):
+    if n <= 1:  # Handle numbers less than or equal to 1
+        return False
+    for i in range(2, int(n**0.5) + 1):  # Check for factors up to the square root of n
+        if n % i == 0:  # If n is divisible by i, it's not prime
+            return False
+    return True  # If no divisors were found, n is prime
+
+# Test cases
+print(is_prime(2))  
+print(is_prime(4))   
+print(is_prime(13))  
+print(is_prime(15))  
+print(is_prime(17))  
+
