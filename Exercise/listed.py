@@ -33,3 +33,25 @@ print(join)
 
 tup = [tuple((i,i**2)) for i in range(1,21) if i % 2 == 0]
 print(tup)
+
+'''
+Question:
+Write a list comprehension that generates a list of the first 10 Fibonacci numbers.
+
+The Fibonacci sequence is defined as follows:
+
+The first two numbers are 0 and 1.
+Every subsequent number is the sum of the two preceding ones.
+
+'''
+
+def fibonacci(n):
+    fib_list = [0, 1]
+    for i in range(2, n):
+        fib_list.append(fib_list[-1] + fib_list[-2])
+    return fib_list
+
+# Generate first 10 Fibonacci numbers
+fibonacci_numbers = fibonacci(10)
+print(fibonacci_numbers)
+
