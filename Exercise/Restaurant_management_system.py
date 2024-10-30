@@ -39,3 +39,8 @@ def MyPlace():
     print(f'Your total bill is {total_price}\n Thankyou for Visitng ')
 
 MyPlace()
+
+
+
+# there are many rooms for improvements which we will perform in the later stages 
+
