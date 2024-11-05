@@ -63,6 +63,17 @@ def ATM():
         else:
             print("Enter the choice from the options only")
 
-ATM()
 
 
+transactions = [
+    {"customer_id": 1, "item": "apple", "amount": 5},
+    {"customer_id": 2, "item": "banana", "amount": 3},
+    {"customer_id": 1, "item": "orange", "amount": 7},
+    {"customer_id": 3, "item": "apple", "amount": 5},
+    {"customer_id": 2, "item": "orange", "amount": 2},
+    {"customer_id": 3, "item": "banana", "amount": 6},
+]
+
+for i in transactions:
+    for keys, values in i.items():
+        print(keys,values)
