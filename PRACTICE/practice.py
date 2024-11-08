@@ -77,3 +77,15 @@ transactions = [
 for i in transactions:
     for keys, values in i.items():
         print(keys,values)
+
+
+
+def factorial(n):
+    # Base case
+    if n == 0:
+        return 1
+    # Recursive case
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))
