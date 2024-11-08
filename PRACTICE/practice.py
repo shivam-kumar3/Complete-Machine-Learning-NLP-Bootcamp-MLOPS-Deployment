@@ -101,3 +101,85 @@ def fibonacci(n):
     # Recursive case
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+
+# atm machine opp que
+
+class Account:
+    def __init__(self, account_number, pin, balance=0):
+        self.account_number = account_number
+        self.pin = pin
+        self.balance = balance
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            print(f"Deposited: {amount}")
+            return True
+        else:
+            print("Invalid deposit amount")
+            return False
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Insufficient balance")
+            return False
+        elif amount <= 0:
+            print("Invalid withdrawal amount")
+            return False
+        else:
+            self.balance -= amount
+            print(f"Withdrew: {amount}")
+            return True
+
+    def get_balance(self):
+        return self.balance
+
+class ATM:
+    def __init__(self):
+        self.accounts = {}  # Dictionary to store accounts by account number
+
+    def create_account(self, account_number, pin, initial_balance=0):
+        if account_number in self.accounts:
+            print("Account already exists")
+        else:
+            account = Account(account_number, pin, initial_balance)
+            self.accounts[account_number] = account
+            print("Account created successfully")
+
+    def authenticate(self, account_number, pin):
+        account = self.accounts.get(account_number)
+        if account and account.pin == pin:
+            return account
+        else:
+            print("Authentication failed")
+            return None
+
+    def deposit(self, account, amount):
+        return account.deposit(amount)
+
+    def withdraw(self, account, amount):
+        return account.withdraw(amount)
+
+    def check_balance(self, account):
+        return account.get_balance()
+
+# Main script to simulate an ATM interaction
+atm = ATM()
+
+# Create a new account
+atm.create_account("12345", "6789", 1000)  # account_number, pin, initial_balance
+
+# Authenticate and perform operations
+account = atm.authenticate("12345", "6789")
+if account:
+    print(f"Current Balance: {atm.check_balance(account)}")
+    
+    # Deposit
+    atm.deposit(account, 500)
+    print(f"Balance after deposit: {atm.check_balance(account)}")
+    
+    # Withdraw
+    atm.withdraw(account, 300)
+    print(f"Balance after withdrawal: {atm.check_balance(account)}")
