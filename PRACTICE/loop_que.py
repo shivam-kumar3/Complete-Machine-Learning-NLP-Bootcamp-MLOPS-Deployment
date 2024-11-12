@@ -46,8 +46,19 @@ vowels = 'aeiou'
 for i in word:
     if i in vowels:
         count += 1
-print(count)
+print(f'Total numbers of vowels in the word is{count}')
 
+
+
+# calculate factorial of a number 5
+
+n = 5
+factorial = 1 
+
+for i in range(1, n+1):
+    factorial *= i
+
+print(factorial)
 
 
 
