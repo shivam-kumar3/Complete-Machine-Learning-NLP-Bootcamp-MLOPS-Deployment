@@ -183,3 +183,19 @@ if account:
     # Withdraw
     atm.withdraw(account, 300)
     print(f"Balance after withdrawal: {atm.check_balance(account)}")
+
+
+
+# currency converstor programme 
+
+def Currency_convertor():
+    amt = int(input('Enter the amount:- '))
+    choice = int(input('In which currency You want to convert into \n1- Doller\n2- INR\n'))
+
+    if choice == 1:
+        print(f'The total amt in doller is ${amt * 0.012}')
+    elif choice == 2:
+        print(f'The total amount in INR is {amt * 84.48}')
+
+
+Currency_convertor()
