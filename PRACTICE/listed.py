@@ -72,3 +72,17 @@ print(is_prime(13))
 print(is_prime(15))  
 print(is_prime(17))  
 
+
+
+# list comprehension
+
+even = [i **2 for i in range(1,20)  if i %2 == 0 ]
+
+print(even)
+
+
+word = "List comprehensions are powerful and concise"
+words = word.split()
+lengthh = [i for i in words if len(i)>= 5]
+
+print(lengthh)
