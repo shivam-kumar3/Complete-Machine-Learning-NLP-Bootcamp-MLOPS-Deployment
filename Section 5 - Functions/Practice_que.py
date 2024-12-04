@@ -30,7 +30,28 @@ def Area_stats(radius):
     area = 3.14 * radius ##2
     circum = 2 * 3.14 * radius
 
-    return ("Area of the Circle is :" ,area, "Circumference of the Circle is ", circum)
+    return f"Area of the Circle is : {area},\nCircumference of the Circle is : {circum}"
 
 
 print(Area_stats(2))
+
+
+# write a function that greets a user. if no name is provided, it should greet with default name
+
+
+def Greet(name = "User"):
+    return f"Good Morning, {name}"
+
+
+print(Greet("Shivam"))
+
+
+# create a lambda function to compute the cube of a number
+
+cube = lambda a : a**3
+
+print(cube(2))
+
+
+# *agrs - write a function that takes variable number of arguments and return their sum 
+
