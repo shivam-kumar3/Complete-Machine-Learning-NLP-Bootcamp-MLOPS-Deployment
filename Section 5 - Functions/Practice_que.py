@@ -55,3 +55,8 @@ print(cube(2))
 
 # *agrs - write a function that takes variable number of arguments and return their sum 
 
+def SumAll(*args):
+    return sum(args)
+
+
+print(SumAll(1,2,3,4,5,6,7,7,42))
