@@ -15,13 +15,5 @@ for i in square(3):
     print(i)
 
 
-a = square(10)
 
 
-
-print(next(a))
-print(next(a))
-print(next(a))
-print(next(a))
-print(next(a))
-print(next(a))
