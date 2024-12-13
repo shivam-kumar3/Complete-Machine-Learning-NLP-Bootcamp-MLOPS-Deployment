@@ -21,3 +21,6 @@ SELECT DISTINCT GENDER
 FROM parks_and_recreation.employee_demographics;
 
 
+
+SELECT GENDER , FIRST_NAME
+FROM parks_and_recreation.employee_demographics
