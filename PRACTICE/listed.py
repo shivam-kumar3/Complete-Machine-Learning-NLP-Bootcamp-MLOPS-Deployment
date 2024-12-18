@@ -86,3 +86,7 @@ words = word.split()
 lengthh = [i for i in words if len(i)>= 5]
 
 print(lengthh)
+
+
+
+
