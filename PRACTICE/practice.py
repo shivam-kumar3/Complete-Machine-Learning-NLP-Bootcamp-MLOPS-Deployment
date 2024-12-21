@@ -198,4 +198,27 @@ def Currency_convertor():
         print(f'The total amount in INR is {amt * 84.48}')
 
 
-Currency_convertor()
+'''
+write a python program that takes two int inputs from the user and prints their sum
+
+
+
+'''
+def sum(num1,num2):
+    print(num1+num2)
+
+sum(324,342)
+
+'''
+Extract a product name from a website URL  
+
+URL -https://www.amazon.in/Apple-iPhone-15-128-GB/dp/B0CHX1W1XY/ref=sr_1_1_sspa?sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1
+
+'''
+
+url = 'https://www.amazon.in/Apple-iPhone-15-128-GB/dp/B0CHX1W1XY/ref=sr_1_1_sspa?sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1'
+
+
+name = url[22:44]
+name = name.replace('-',' ')
+print(name)
