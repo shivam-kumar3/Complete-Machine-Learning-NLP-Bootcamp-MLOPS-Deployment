@@ -222,3 +222,66 @@ url = 'https://www.amazon.in/Apple-iPhone-15-128-GB/dp/B0CHX1W1XY/ref=sr_1_1_ssp
 name = url[22:44]
 name = name.replace('-',' ')
 print(name)
+
+
+'''
+simple authetication system for a secure faciltiy 
+the system needs to verify the user's pin
+they have a valid access code ie 4 digit numerical code 
+or 
+they are a member of the access list , which contains the following members [69,420,666,1337]
+
+write a python program that prompts the user to enter their access code and  check whether they have access to the facility
+display a message indicating whether access is granted or denied
+
+'''
+
+def access():
+    print("Welcome to the world bank")
+    members = [69,420,666,1337]
+    user_pin = int(input("Enter your pin for the access:- "))
+
+    if user_pin in members:
+        print("Access Granted\nWelcome to world bank services")
+    else:
+        print("Access Denied")
+
+
+'''
+Create a python programme for generating a grocery list based on dietary preferencecs and given budget.
+
+
+'''
+
+def Grocery():
+    pref = int(input("1- Vegetarian\n2- Non Vegetarian\n"))
+    budget = int(input("Enter Your budget for the shopping\n"))
+    # Ensure cart, pref, and budget are initialized
+    cart = []
+
+
+    if pref == 1:
+        if budget >= 15:
+            cart.extend(['Broccoli', 'Carrots', 'Bell Peppers', 'Tofu'])
+        elif budget >= 10:
+            cart.extend(['Broccoli', 'Carrots'])
+        elif budget >= 5:
+            cart.append('Broccoli')
+    elif pref == 2:
+        if budget >= 25:
+            cart.extend(['Broccoli', 'Carrots', 'Bell Peppers', 'Chicken Breast', 'Eggs'])
+        elif budget >= 20:
+            cart.extend(['Broccoli', 'Carrots', 'Bell Peppers', 'Chicken Breast'])
+        elif budget >= 15:
+            cart.extend(['Broccoli', 'Carrots', 'Bell Peppers'])
+        elif budget >= 10:
+            cart.extend(['Broccoli', 'Carrots'])
+        elif budget >= 5:
+            cart.append('Broccoli')
+    else:
+        print("No products added due to preferences or budget constraints.")
+
+    print(f'You have these products in your cart:\n{cart}')
+
+
+Grocery()
