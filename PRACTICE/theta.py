@@ -21,4 +21,6 @@ print(theta_1)
 
 theta_0 = y_mean - (theta_1 * x_mean)
 
-print(round(theta_0,2))
+print(round(theta_0,2 ))
+
+
