@@ -256,9 +256,7 @@ Create a python programme for generating a grocery list based on dietary prefere
 def Grocery():
     pref = int(input("1- Vegetarian\n2- Non Vegetarian\n"))
     budget = int(input("Enter Your budget for the shopping\n"))
-    # Ensure cart, pref, and budget are initialized
     cart = []
-
 
     if pref == 1:
         if budget >= 15:
