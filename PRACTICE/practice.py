@@ -282,4 +282,23 @@ def Grocery():
     print(f'You have these products in your cart:\n{cart}')
 
 
-Grocery()
+
+
+
+'''
+we have a list of names , we want to print the list of all names that have r/R in them.
+
+'''
+
+names = ['shirvam', 'rohan','radhRe','Ramesh', 'shahi']
+names_with_r = []
+for i in names:
+    if 'R' in i or 'r' in i:
+        names_with_r.append(i)
+print(names_with_r)
+
+# solve the above problem with list comprehension
+
+name_r = [i for i in names if 'r' in i]
+print(name_r)
+
