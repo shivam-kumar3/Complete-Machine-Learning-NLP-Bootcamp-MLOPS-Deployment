@@ -63,6 +63,6 @@ for que_numer, ques in enumerate(question):
         print(f'Your score is {score} out of {len(question)}')
         break 
 
-print(f'Your final score is {score} out of {len(question)}')
+print(f'\nYour final score is {score} out of {len(question)}')
 
 
