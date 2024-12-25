@@ -66,3 +66,6 @@ for que_numer, ques in enumerate(question):
 print(f'\nYour final score is {score} out of {len(question)}')
 
 
+
+
+
