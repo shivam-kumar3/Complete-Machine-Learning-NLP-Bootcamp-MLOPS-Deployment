@@ -6,7 +6,7 @@ Key Concepts: File handling, data structures (dictionaries/lists), input validat
 
 '''
 
-class Personal_expense_tracker:
+class PersonalExpenseTracker:
     def __init__(self, budget):
         self.budget = budget
         self.expenses = {}
@@ -33,6 +33,7 @@ class Personal_expense_tracker:
         print(f'Remaining Budget : {self.budget}\n')
 
 
-shivam = Personal_expense_tracker(80000)
+shivam = PersonalExpenseTracker(80000)
 # shivam.Add_expense()
 shivam.view_expenses()
+
