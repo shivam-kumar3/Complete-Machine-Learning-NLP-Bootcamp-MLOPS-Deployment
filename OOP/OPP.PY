@@ -31,7 +31,7 @@ class Doggy:
         print(f'Dog Age {self.age}')
 
     def Show_owner(self):
-        print(f'Owner Details {self.owner}')
+        print(f'Owner Details : {self.owner}')
 
 
 class Owner:
@@ -48,4 +48,24 @@ doggy = Doggy('Tobby','Labrador',9,owner_1)
 doggy.Name()
 doggy.Age()
 doggy.Breed()
-doggy.Show_owner()
+print(doggy.owner.name)
+
+
+'''
+Lets make a email id organizer with private attributes
+
+'''
+
+class User:
+    def __init__(self,username,email,password):
+        self.username = username
+        self.email = email
+        self.__password = password
+
+
+
+user1 = User('Shivam','shivamshahi@gmail.com','1243')
+
+print(user1.username)
+print(user1.email)
+print(user1.__password)
