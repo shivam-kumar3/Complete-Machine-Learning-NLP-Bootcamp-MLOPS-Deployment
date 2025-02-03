@@ -62,10 +62,23 @@ class User:
         self.email = email
         self.__password = password
 
+    def Get_email(self):
+        print(self.email)
+
+    def clean_email(self):
+        return self.email.lower().strip()
 
 
-user1 = User('Shivam','shivamshahi@gmail.com','1243')
+
+user1 = User('Shivam','SHivamKumar@gmail.com','1243')
 
 print(user1.username)
 print(user1.email)
-print(user1.__password)
+
+
+print(user1.clean_email())
+
+
+# python "Consenting Adults" in philosophy
+
+
