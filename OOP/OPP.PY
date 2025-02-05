@@ -56,29 +56,35 @@ Lets make a email id organizer with private attributes
 
 '''
 
+from datetime import datetime
 class User:
     def __init__(self,username,email,password):
         self.username = username
-        self.email = email
+        self.__email = email
         self.__password = password
 
-    def Get_email(self):
-        print(self.email)
 
     def clean_email(self):
         return self.email.lower().strip()
 
+    def get_email(self):
+        print(f'Email accessed at {datetime.now()}')
+        return self.__email
+
+    def set_email(self, new_email):
+        self.__email = new_email
 
 
 user1 = User('Shivam','SHivamKumar@gmail.com','1243')
 
 print(user1.username)
-print(user1.email)
+print(user1.get_email())
 
+user1.set_email("shivamm.py@gmail.com")
 
-print(user1.clean_email())
+print(user1.get_email())
+
 
 
 # python "Consenting Adults" in philosophy
-
 
