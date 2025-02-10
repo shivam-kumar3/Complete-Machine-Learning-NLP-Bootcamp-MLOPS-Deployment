@@ -39,7 +39,6 @@ def Area_calculator():
 
 
 
-Area_calculator()
 
 '''
 Exercise 4: Area of a Field
@@ -48,3 +47,26 @@ feet. Display the area of the field in acres.
 
 '''
 
+def farmer_area():
+    try:
+        width = float(input("Enter the width of the field (in feet):- "))
+        length = float(input("Enter the length of the field (in feet):- "))
+        total_area = width * length
+        total_acre = total_area / 43560  # 1 acre = 43,560 sq ft
+
+        acre_word = "acre" if total_acre == 1 else "acres"  # Proper pluralization
+        print(f"Hi user! \nYou have a total of {total_acre:.2f} {acre_word} of field.")
+    except ValueError:
+        print("Invalid input! Please enter numeric values.")
+
+farmer_area()
+
+
+'''
+Exercise 5: Bottle Deposits
+(Solved, 15 Lines)
+In many jurisdictions a small deposit is added to drink containers to encourage people to recycle them. In one particular jurisdiction, drink containers holding one liter or less have a $0.10 deposit, and drink containers holding more than one liter have a $0.25 deposit.
+Write a program that reads the number of containers of each size from the user.
+Your program should continue by computing and displaying the refund that will be received for returning those containers. Format the output so that it includes a dollar sign and two digits to the right of the decimal point.
+
+'''
