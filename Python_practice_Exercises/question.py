@@ -70,3 +70,17 @@ Write a program that reads the number of containers of each size from the user.
 Your program should continue by computing and displaying the refund that will be received for returning those containers. Format the output so that it includes a dollar sign and two digits to the right of the decimal point.
 
 '''
+
+# Get the number of containers from the user
+small_containers = int(input("Enter the number of containers (1 liter or less): "))
+large_containers = int(input("Enter the number of containers (more than 1 liter): "))
+
+# Define deposit values
+small_deposit = 0.10
+large_deposit = 0.25
+
+# Calculate the total refund
+total_refund = (small_containers * small_deposit) + (large_containers * large_deposit)
+
+# Display the result formatted to two decimal places
+print(f"Total refund: ${total_refund:.2f}")
