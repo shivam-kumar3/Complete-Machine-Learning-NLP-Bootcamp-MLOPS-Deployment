@@ -84,3 +84,44 @@ total_refund = (small_containers * small_deposit) + (large_containers * large_de
 
 # Display the result formatted to two decimal places
 print(f"Total refund: ${total_refund:.2f}")
+
+'''
+Create a program that reads two integers, a and b, from the user. Your program should
+compute and display:
+• The sum of a and b
+• The difference when b is subtracted from a
+• The product of a and b
+• The quotient when a is divided by b
+• The remainder when a is divided by b
+• The result of log10 a
+• The result of ab
+
+'''
+
+import math
+
+def main():
+    # Read two integers from the user
+    a = int(input("Enter the first integer (a): "))
+    b = int(input("Enter the second integer (b): "))
+    
+    # Perform calculations
+    sum_ab = a + b
+    difference_ab = a - b
+    product_ab = a * b
+    quotient_ab = a / b if b != 0 else "Undefined (division by zero)"
+    remainder_ab = a % b if b != 0 else "Undefined (modulo by zero)"
+    log_a = math.log10(a) if a > 0 else "Undefined (logarithm of non-positive number)"
+    power_ab = a ** b
+    
+    # Display results
+    print(f"Sum: {sum_ab}")
+    print(f"Difference: {difference_ab}")
+    print(f"Product: {product_ab}")
+    print(f"Quotient: {quotient_ab}")
+    print(f"Remainder: {remainder_ab}")
+    print(f"log10(a): {log_a}")
+    print(f"a^b: {power_ab}")
+
+if __name__ == "__main__":
+    main()
