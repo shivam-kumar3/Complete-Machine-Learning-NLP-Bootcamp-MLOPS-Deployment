@@ -161,3 +161,30 @@ lon2 = float(input("Enter longitude of second point: "))
 
 distance = haversine(lat1, lon1, lat2, lon2)
 print(f"The distance between the points is {distance:.2f} km")
+
+
+'''
+Exercise 14: Height Units
+
+Many people think about their height in feet and inches, even in some countries that
+primarily use the metric system. Write a program that reads a number of feet from
+the user, followed by a number of inches. Once these values are read, your program
+should compute and display the equivalent number of centimeters.
+
+
+'''
+
+def height_to_cm(feet, inches):
+    cm_per_inch = 2.54
+    total_inches = feet * 12 + inches
+    return total_inches * cm_per_inch
+
+# User input
+feet = int(input("Enter height in feet: "))
+inches = int(input("Enter additional inches: "))
+
+# Compute height in cm
+height_cm = height_to_cm(feet, inches)
+
+# Display result
+print(f"Equivalent height: {height_cm:.2f} cm")
