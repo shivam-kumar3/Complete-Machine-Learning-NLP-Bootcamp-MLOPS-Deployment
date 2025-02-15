@@ -125,3 +125,39 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+'''
+Create a program that allows the user to enter the latitude and longitude of two
+points on the Earth in degrees. Your program should display the distance between
+the points, following the surface of the earth, in kilometers.
+
+
+'''
+
+
+import math
+
+def haversine(lat1, lon1, lat2, lon2):
+    R = 6371  # Radius of Earth in kilometers
+    
+    # Convert latitude and longitude from degrees to radians
+    lat1, lon1, lat2, lon2 = map(math.radians, [lat1, lon1, lat2, lon2])
+    
+    # Haversine formula
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+    a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+    distance = R * c
+    
+    return distance
+
+# User input
+lat1 = float(input("Enter latitude of first point: "))
+lon1 = float(input("Enter longitude of first point: "))
+lat2 = float(input("Enter latitude of second point: "))
+lon2 = float(input("Enter longitude of second point: "))
+
+distance = haversine(lat1, lon1, lat2, lon2)
+print(f"The distance between the points is {distance:.2f} km")
