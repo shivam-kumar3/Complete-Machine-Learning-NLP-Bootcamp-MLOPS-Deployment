@@ -188,3 +188,29 @@ height_cm = height_to_cm(feet, inches)
 
 # Display result
 print(f"Equivalent height: {height_cm:.2f} cm")
+
+'''
+Exercise 16: Area and Volume
+(15 Lines)
+Write a program that begins by reading a radius, r, from the user. The program will
+continue by computing and displaying the area of a circle with radius r and the
+volume of a sphere with radius r. Use the pi constant in the math module in your
+calculations.
+Hint: The area of a circle is computed using the formula area = πr2. The
+volume of a sphere is computed using the formula volume = 4/3πr3.
+
+'''
+import math
+
+# Read radius from user
+r = float(input("Enter the radius: "))
+
+# Compute area of the circle
+area = math.pi * r**2
+
+# Compute volume of the sphere
+volume = (4/3) * math.pi * r**3
+
+# Display results
+print(f"Area of the circle: {area:.2f}")
+print(f"Volume of the sphere: {volume:.2f}")
