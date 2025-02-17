@@ -214,3 +214,25 @@ volume = (4/3) * math.pi * r**3
 # Display results
 print(f"Area of the circle: {area:.2f}")
 print(f"Volume of the sphere: {volume:.2f}")
+
+
+'''
+Exercise 21: Area of a Triangle
+The area of a triangle can be computed using the following formula, where b is the
+length of the base of the triangle, and h is its height:
+area =b × h /2
+Write a program that allows the user to enter valuesforb andh. The program should
+then compute and display the area of a triangle with base length b and height h.
+
+
+'''
+def calculate_triangle_area():
+    length = float(input("Enter the base length: "))
+    height = float(input("Enter the height: "))
+
+    area = (length * height) / 2
+
+    print(f"The area of the triangle is {area:.2f}")
+
+# Call the function
+calculate_triangle_area()
