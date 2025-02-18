@@ -261,3 +261,27 @@ total_seconds = time_to_seconds(days, hours, minutes, seconds)
 
 # Display result
 print(f"Total duration in seconds: {total_seconds}")
+
+
+'''
+Exercise 28: Body Mass Index
+(14 Lines)
+Write a program that computes the body mass index (BMI) of an individual. Your
+program should begin by reading a height and weight from the user. Then it should
+use one of the following two formulas to compute the BMI before displaying it. 
+
+
+'''
+
+def calculate_bmi(weight, height):
+    return weight / (height ** 2)
+
+# Get user input
+weight = float(input("Enter weight in kg: "))
+height = float(input("Enter height in meters: "))
+
+# Compute BMI
+bmi = calculate_bmi(weight, height)
+
+# Display result
+print(f"Body Mass Index (BMI): {bmi:.2f}")
