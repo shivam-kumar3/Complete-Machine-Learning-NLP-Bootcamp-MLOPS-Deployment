@@ -236,3 +236,28 @@ def calculate_triangle_area():
 
 # Call the function
 calculate_triangle_area()
+
+'''
+Exercise 24: Units of Time
+(22 Lines)
+Create a program that reads a duration from the user as a number of days, hours,
+minutes, and seconds. Compute and display the total number of seconds represented
+by this duration.
+
+'''
+
+def time_to_seconds(days, hours, minutes, seconds):
+    total_seconds = (days * 86400) + (hours * 3600) + (minutes * 60) + seconds
+    return total_seconds
+
+# Get user input
+days = int(input("Enter number of days: "))
+hours = int(input("Enter number of hours: "))
+minutes = int(input("Enter number of minutes: "))
+seconds = int(input("Enter number of seconds: "))
+
+# Compute total seconds
+total_seconds = time_to_seconds(days, hours, minutes, seconds)
+
+# Display result
+print(f"Total duration in seconds: {total_seconds}")
