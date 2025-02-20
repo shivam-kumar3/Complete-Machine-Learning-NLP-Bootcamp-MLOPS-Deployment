@@ -304,3 +304,65 @@ def temp():
 
 
 temp()
+
+'''
+Exercise 38: Name That Shape
+(Solved, 31 Lines)
+Write a program that determines the name of a shape from its number of sides. Read
+the number of sides from the user and then report the appropriate name as part of
+a meaningful message. Your program should support shapes with anywhere from 3
+up to (and including) 10 sides. If a number of sides outside of this range is entered
+then your program should display an appropriate error message.
+
+
+
+'''
+
+# Get the number of sides from the user
+num_sides = int(input("Enter the number of sides: "))
+
+# Dictionary mapping number of sides to shape names
+shapes = {
+    3: "Triangle",
+    4: "Quadrilateral",
+    5: "Pentagon",
+    6: "Hexagon",
+    7: "Heptagon",
+    8: "Octagon",
+    9: "Nonagon",
+    10: "Decagon"
+}
+
+# Determine and display the shape name
+if num_sides in shapes:
+    print(f"A shape with {num_sides} sides is called a {shapes[num_sides]}.")
+else:
+    print("Error: Please enter a number between 3 and 10.")
+'''
+
+Exercise 41: Classifying Triangles
+(Solved, 21 Lines)
+A triangle can be classified based on the lengths of its sides as equilateral, isosceles or
+scalene. All three sides of an equilateral triangle have the same length. An isosceles
+triangle has two sides that are the same length, and a third side that is a different
+length. If all of the sides have different lengths then the triangle is scalene.
+Write a program that reads the lengths of the three sides of a triangle from the
+user. Then display a message that states the triangle’s type.
+
+'''
+
+# Get the lengths of the three sides from the user
+a = float(input("Enter the length of the first side: "))
+b = float(input("Enter the length of the second side: "))
+c = float(input("Enter the length of the third side: "))
+
+# Check if the inputs can form a valid triangle
+if a + b > c and a + c > b and b + c > a:
+    if a == b == c:
+        print("The triangle is Equilateral.")
+    elif a == b or a == c or b == c:
+        print("The triangle is Isosceles.")
+    else:
+        print("The triangle is Scalene.")
+else:
+    print("The given sides do not form a valid triangle.")
