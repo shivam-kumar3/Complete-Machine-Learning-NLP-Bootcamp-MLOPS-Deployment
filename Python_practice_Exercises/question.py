@@ -396,3 +396,56 @@ elif year % 4 == 0:
     print(f"{year} is a leap year.")
 else:
     print(f"{year} is not a leap year.")
+
+
+'''
+Exercise 59: Next Day
+(50 Lines)
+Write a program that reads a date from the user and computes its immediate successor.
+For example, if the user enters values that represent 2019-11-18 then your program
+should display a message indicating that the day immediately after 2019-11-18 is
+2019-11-19. If the user enters values that represent 2019-11-30 then the program
+should indicate that the next day is 2019-12-01. If the user enters values that represent
+2019-12-31 then the program should indicate that the next day is 2020-01-01. The
+date will be entered in numeric form with three separate input statements; one for
+the year, one for the month, and one for the day. Ensure that your program works
+correctly for leap years.
+
+
+'''
+
+def is_leap_year(year):
+    """Returns True if the given year is a leap year, otherwise False."""
+    return (year % 400 == 0) or (year % 100 != 0 and year % 4 == 0)
+
+def next_day(year, month, day):
+    """Computes the next day's date."""
+    # Days in each month (handle February separately for leap years)
+    days_in_month = [31, 29 if is_leap_year(year) else 28, 31, 30, 31, 30, 
+                     31, 31, 30, 31, 30, 31]
+    
+    # Move to the next day
+    day += 1
+    
+    # If the day exceeds the month's days, reset day and move to the next month
+    if day > days_in_month[month - 1]:
+        day = 1
+        month += 1
+    
+    # If the month exceeds 12, reset month and move to the next year
+    if month > 12:
+        month = 1
+        year += 1
+    
+    return year, month, day
+
+# Get user input
+year = int(input("Enter year: "))
+month = int(input("Enter month (1-12): "))
+day = int(input("Enter day (1-31): "))
+
+# Compute next day
+new_year, new_month, new_day = next_day(year, month, day)
+
+# Display result
+print(f"The next day is {new_year}-{new_month:02d}-{new_day:02d}")
