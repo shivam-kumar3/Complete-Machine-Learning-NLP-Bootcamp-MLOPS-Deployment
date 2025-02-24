@@ -449,3 +449,35 @@ new_year, new_month, new_day = next_day(year, month, day)
 
 # Display result
 print(f"The next day is {new_year}-{new_month:02d}-{new_day:02d}")
+
+'''
+Exercise 61: Is a License Plate Valid?
+(Solved, 28 Lines)
+In a particular jurisdiction, older license plates consist of three uppercase letters
+followed by three digits. When all of the license plates following that pattern had
+been used, the format was changed to four digits followed by three uppercase letters.
+Write a program that begins by reading a string of characters from the user. Then
+your program should display a message indicating whether the characters are valid
+for an older style license plate or a newer style license plate. Your program should
+display an appropriate message if the string entered by the user is not valid for either
+style of license plate.
+
+
+'''
+
+import re
+
+def validate_license_plate(plate):
+    old_pattern = r'^[A-Z]{3}\d{3}$'  # Three letters followed by three digits
+    new_pattern = r'^\d{4}[A-Z]{3}$'  # Four digits followed by three letters
+    
+    if re.fullmatch(old_pattern, plate):
+        print("This is a valid older style license plate.")
+    elif re.fullmatch(new_pattern, plate):
+        print("This is a valid newer style license plate.")
+    else:
+        print("This is not a valid license plate format.")
+
+# Get user input
+plate = input("Enter a license plate: ").strip()
+validate_license_plate(plate)
