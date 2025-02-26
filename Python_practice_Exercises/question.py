@@ -507,3 +507,92 @@ for price in original_prices:
     discount = price * discount_rate
     new_price = price - discount
     print(f"${price:<14.2f}${discount:<14.2f}${new_price:<14.2f}")
+
+
+'''
+xercise 66: No More Pennies
+(Solved, 39 Lines)
+February 4, 2013 was the last day that pennies were distributed by the Royal Canadian
+Mint. Now that pennies have been phased out retailers must adjust totals so that they
+are multiples of 5 cents when they are paid for with cash (credit card and debit card
+transactions continue to be charged to the penny). While retailers have some freedom
+in how they do this, most choose to round to the closest nickel.
+Write a program that reads prices from the user until a blank line is entered.
+Display the total cost of all the entered items on one line, followed by the amount
+due if the customer pays with cash on a second line. The amount due for a cash
+payment should be rounded to the nearest nickel. One way to compute the cash
+payment amount is to begin by determining how many pennies would be needed to
+pay the total. Then compute the remainder when this number of pennies is divided
+by 5. Finally, adjust the total down if the remainder is less than 2.5. Otherwise adjust
+the total up.
+
+
+'''
+
+
+import math
+
+def round_to_nickel(amount):
+    pennies = round(amount * 100)  # Convert to pennies
+    remainder = pennies % 5
+    
+    if remainder < 2.5:
+        rounded_pennies = pennies - remainder
+    else:
+        rounded_pennies = pennies + (5 - remainder)
+    
+    return rounded_pennies / 100  # Convert back to dollars
+
+def main():
+    total = 0.0
+    while True:
+        price = input("Enter item price (or blank to finish): ")
+        if price == "":
+            break
+        try:
+            total += float(price)
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+    
+    print(f"Total cost: ${total:.2f}")
+    cash_total = round_to_nickel(total)
+    print(f"Cash payment amount: ${cash_total:.2f}")
+
+if __name__ == "__main__":
+    main()
+
+
+'''
+Exercise 72: Fizz-Buzz
+(17 Lines)
+Fizz-Buzz is a game that is sometimes played by children to help them learn about
+division. The players are commonly arranged in a circle so that the game can progress
+from player to player continually. The starting player begins by saying one, and then
+play passes to the player to the left. Each subsequent player is responsible for the
+next integer in sequence before play passes to the following player. On a player’s
+turn they must either say their number or one of following substitutions:
+• If the player’s number is divisible by 3 then the player says fizz instead of their
+number.
+• If the player’s number is divisible by 5 then the player says buzz instead of their
+number.
+A player must say both fizz and buzz for numbers that are divisible by both 3
+and 5. Any player that fails to perform the correct substitution or hesitates before
+answering is eliminated from the game. The last player remaining is the winner.
+Write a program that displays the answers for the first 100 numbers in the FizzBuzz game. Each answer should be displayed on its own line
+
+
+'''
+
+def fizz_buzz():
+    for i in range(1, 101):
+        if i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz")
+        elif i % 3 == 0:
+            print("Fizz")
+        elif i % 5 == 0:
+            print("Buzz")
+        else:
+            print(i)
+
+if __name__ == "__main__":
+    fizz_buzz()
