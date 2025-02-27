@@ -596,3 +596,22 @@ def fizz_buzz():
 
 if __name__ == "__main__":
     fizz_buzz()
+
+
+'''
+Exercise 75: Is a String a Palindrome?
+(Solved, 26 Lines)
+A string is a palindrome if it is identical forward and backward. For example “anna”,
+“civic”, “level” and “hannah” are all examples of palindromic words.Write a program
+that reads a string from the user and uses a loop to determine whether or not it is a
+palindrome. Display the result,
+'''
+
+def Palindrome():
+    user = input("Enter the word")
+    if user == user[::-1]:
+        print("The word is Palindrome")
+    else:
+        print("The word is not palindrome")
+
+Palindrome()
