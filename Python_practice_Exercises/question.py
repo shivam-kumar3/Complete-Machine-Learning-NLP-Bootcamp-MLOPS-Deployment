@@ -730,3 +730,43 @@ def main():
 # Run the main program only if the script is executed directly
 if __name__ == "__main__":
     main()
+
+
+'''
+Exercise 96: Does a String Represent an Integer?
+(Solved, 30 Lines)
+In this exercise you will write a function named isInteger that determines
+whether or not the characters in a string represent a valid integer. When determining if a string represents an integer you should ignore any leading or trailing
+white space. Once this white space is ignored, a string represents an integer if its
+length is at least one and it only contains digits, or if its first character is either +
+or - and the first character is followed by one or more characters, all of which are
+digits.
+Write a main program that reads a string from the user and reports whether or
+not it represents an integer. Ensure that the main program will not run if the file
+containing your solution is imported into another program.
+'''
+
+def isInteger(s):
+    """Returns True if the string represents a valid integer, otherwise False."""
+    s = s.strip()  # Remove leading and trailing whitespace
+
+    if not s:  # Check if the string is empty after stripping
+        return False
+
+    if s[0] in ('+', '-') and s[1:].isdigit():
+        return True
+    return s.isdigit()
+
+def main():
+    # Read a string from the user
+    user_input = input("Enter a string: ")
+
+    # Check if it represents an integer
+    if isInteger(user_input):
+        print("The string represents a valid integer.")
+    else:
+        print("The string does not represent a valid integer.")
+
+# Run the main program only if the script is executed directly
+if __name__ == "__main__":
+    main()
