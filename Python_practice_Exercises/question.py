@@ -653,3 +653,80 @@ def multiplication_table():
         print()
 
 multiplication_table()
+
+'''
+Exercise 89: Convert an Integer to Its Ordinal Number
+(47 Lines)
+Words like first, second and third are referred to as ordinal numbers. In this exercise,
+you will write a function that takes an integer as its only parameter and returns a
+string containing the appropriate English ordinal number as its only result. Your
+function must handle the integers between 1 and 12 (inclusive). It should return an
+empty string if the function is called with an argument outside of this range. Include
+a main program that demonstrates your function by displaying each integer from 1
+to 12 and its ordinal number. Your main program should only run when your file has
+not been imported into another program.
+
+
+'''
+
+def integer_to_ordinal(n):
+    # Check if n is within the valid range (1-12)
+    if n < 1 or n > 12:
+        return ''
+    
+    # Define ordinal suffixes for 1st to 12th
+    ordinals = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th', '11th', '12th']
+    
+    # Return the appropriate ordinal
+    return ordinals[n - 1]
+
+def main():
+    # Display each integer from 1 to 12 with its ordinal number
+    for i in range(1, 13):
+        print(f"{i} -> {integer_to_ordinal(i)}")
+
+# Run the main program only if the script is executed directly
+if __name__ == "__main__":
+    main()
+
+
+'''
+Exercise 94: Is It a Valid Triangle?
+(33 Lines)
+If you have 3 straws, possibly of differing lengths, it may or may not be possible
+to lay them down so that they form a triangle when their ends are touching. For
+example, if all of the straws have a length of 6 inches then one can easily construct
+an equilateral triangle using them. However, if one straw is 6 inches long, while
+the other two are each only 2 inches long, then a triangle cannot be formed. More
+generally, if any one length is greater than or equal to the sum of the other two then
+the lengths cannot be used to form a triangle. Otherwise they can form a triangle.
+Write a function that determines whether or not three lengths can form a triangle.
+The function will take 3 parameters and return a Boolean result. If any of the lengths
+are less than or equal to 0 then your function should return False. Otherwise it
+should determine whether or not the lengths can be used to form a triangle using
+the method described in the previous paragraph, and return the appropriate result.
+In addition, write a program that reads 3 lengths from the user and demonstrates the
+behaviour of your function.
+'''
+
+def is_valid_triangle(a, b, c):
+    """Returns True if the given lengths can form a triangle, otherwise False."""
+    if a <= 0 or b <= 0 or c <= 0:
+        return False
+    return a + b > c and a + c > b and b + c > a
+
+def main():
+    # Read three lengths from the user
+    a = float(input("Enter the length of the first side: "))
+    b = float(input("Enter the length of the second side: "))
+    c = float(input("Enter the length of the third side: "))
+
+    # Check if they form a valid triangle
+    if is_valid_triangle(a, b, c):
+        print("The given lengths can form a triangle.")
+    else:
+        print("The given lengths cannot form a triangle.")
+
+# Run the main program only if the script is executed directly
+if __name__ == "__main__":
+    main()
