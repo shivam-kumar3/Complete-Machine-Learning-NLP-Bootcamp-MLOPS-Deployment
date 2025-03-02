@@ -770,3 +770,39 @@ def main():
 # Run the main program only if the script is executed directly
 if __name__ == "__main__":
     main()
+
+
+'''
+Exercise 98: Is a Number Prime?
+(Solved, 28 Lines)
+A prime number is an integer greater than one that is only divisible by one and itself.
+Write a function that determines whether or not its parameter is prime, returning
+True if it is, and False otherwise. Write a main program that reads an integer
+from the user and displays a message indicating whether or not it is prime. Ensure
+that the main program will not run if the file containing your solution is imported into another program.
+
+'''
+
+def is_prime(n):
+    """Return True if n is a prime number, otherwise return False."""
+    if n < 2:
+        return False
+    if n == 2:
+        return True  # 2 is the only even prime number
+    if n % 2 == 0:
+        return False  # Eliminate even numbers > 2
+    for i in range(3, int(n ** 0.5) + 1, 2):  # Check odd divisors up to sqrt(n)
+        if n % i == 0:
+            return False
+    return True
+
+def main():
+    """Main program to take user input and check if it's prime."""
+    num = int(input("Enter an integer: "))
+    if is_prime(num):
+        print(f"{num} is a prime number.")
+    else:
+        print(f"{num} is not a prime number.")
+
+if __name__ == "__main__":
+    main()
