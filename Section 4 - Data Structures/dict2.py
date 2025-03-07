@@ -46,3 +46,39 @@ def generate_random_license_plate():
 if __name__ == "__main__":
     license_plate = generate_random_license_plate()
     print(f"Random License Plate: {license_plate}")
+
+
+'''
+Exercise 102: Check a Password
+(Solved, 40 Lines)
+In this exercise you will write a function that determines whether or not a password
+is good. We will define a good password to be a one that is at least 8 characters long
+and contains at least one uppercase letter, at least one lowercase letter, and at least
+one number. Your function should return True if the password passed to it as its
+only parameter is good. Otherwise it should return False. Include a main program
+that reads a password from the user and reports whether or not it is good. Ensure
+that your main program only runs when your solution has not been imported into
+another file.
+
+'''
+
+import string
+
+# Function to check if a password is good
+def is_good_password(password):
+    if len(password) < 8:
+        return False
+    
+    has_upper = any(char.isupper() for char in password)
+    has_lower = any(char.islower() for char in password)
+    has_digit = any(char.isdigit() for char in password)
+
+    return has_upper and has_lower and has_digit
+
+# Main program
+if __name__ == "__main__":
+    password = input("Enter a password: ")
+    if is_good_password(password):
+        print("Your password is good.")
+    else:
+        print("Your password is not strong enough.")
