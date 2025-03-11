@@ -137,3 +137,44 @@ print(np.max(arr))
 print(np.min(arr))
 print(np.std(arr))
 print(np.var(arr))
+
+
+# chapter 3 - indexing / slicing
+
+# indexing - single number 
+# slicing - multiple elements
+
+# fancy indexing 
+# boolean masking with conditions
+
+matrix = np.array([[
+    [2,4,6],
+    [8,10,12],
+    [9,43,22]]
+])
+
+print(matrix[:,1:,2])
+print(matrix[:,-1,1])
+print(matrix[:,1,1])
+
+# matrix [rowindex,coloumindex]
+print('-------------------')
+# boolen masking
+print(matrix[matrix > 10])
+
+# reshaping and manipulating
+
+# RESHAPING - CHANGING THE DIMENTION WITHOUT CHANGING THE DATA
+
+# reshape (rows, colums)
+# if dimension match
+
+arr = np.array([1,2,3,4,5,6])
+
+reshaped_arr = arr.reshape(2,3)
+
+print(arr)
+print(reshaped_arr)
+reshaped_arr = arr.reshape(3,2)
+print(reshaped_arr)
+
