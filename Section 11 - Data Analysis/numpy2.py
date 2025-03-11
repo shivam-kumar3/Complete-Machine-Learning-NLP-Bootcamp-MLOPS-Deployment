@@ -25,10 +25,10 @@ print(ar_2d)
 print(ar_2d.ndim)
 
 # matrix - multi dimention array
-matrix = np.array([
+matrix = np.array([[
     [2,4,6],
     [8,10,12],
-    [9,43,22]
+    [9,43,22]]
 ])
 
 print(matrix)
@@ -58,3 +58,82 @@ print(one_array)
 
 full_array = np.full((5,6),7)
 print(full_array)
+
+# creating sequences of numbers in numpy 
+# arange(start,stop,step)
+
+arr = np.arange(9,12)
+print(arr)
+
+# creating identity matrices
+# eye(size)
+
+identity_matrix = np.eye(4)
+print(identity_matrix)
+
+# ARRAY PROPERTIES AND OPERATIONS
+
+# shape , size , type
+
+print(identity_matrix.shape)
+
+ar_2d = np.array([[1,2,3],
+                  [4,5,6],
+                  ])
+print(ar_2d.shape)
+print(ar_2d.size)
+print(ar_2d.ndim)
+print(ar_1d.ndim)
+print(matrix.ndim)
+
+# dtype - dataypes of elements (int, float, str)
+
+arr_float = np.array([10,20,30.6,50])
+print(arr_float.dtype)
+
+# astype - convert the data type
+
+
+arr = np.array([1.2,2.5,3.9])
+
+int_arr = arr.astype(int)
+print(arr)
+print(int_arr)
+
+
+age = "100"
+
+age_array = np.array(age, dtype='int')
+
+print(age_array)
+
+
+
+# OPERATIONS
+'*,%,+,-'
+
+arr = np.array([10,20,30])
+
+print(arr +5 )
+print(arr * 5)
+print(arr **2)
+print(arr % 4)
+
+
+# aggregation function
+'''
+np.sum () -  add all elements
+np.mean() - avg value 
+np.min(array) - smallest value
+np.array(array) - max value 
+np.std(array) - standard deviation
+np.var(array) - variance
+'''
+
+arr = np.array([10,20,40,50])
+print(np.sum(arr))
+print(np.mean(arr))
+print(np.max(arr))
+print(np.min(arr))
+print(np.std(arr))
+print(np.var(arr))
