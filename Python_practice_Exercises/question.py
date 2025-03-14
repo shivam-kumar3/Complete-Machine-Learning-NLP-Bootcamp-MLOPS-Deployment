@@ -829,3 +829,59 @@ def generate_random_password():
 if __name__ == "__main__":
     # Display the randomly generated password
     print(generate_random_password())
+
+'''
+Exercise 108: Reduce Measures
+(Solved, 87 Lines)
+Many recipe books still use cups, tablespoons and teaspoons to describe the volumes
+of ingredients used when cooking or baking. While such recipes are easy enough to
+follow if you have the appropriate measuring cups and spoons, they can be difficult
+to double, triple or quadruple when cooking Christmas dinner for the entire extended
+family. For example, a recipe that calls for 4 tablespoons of an ingredient requires 16
+tablespoons when quadrupled. However, 16 tablespoons would be better expressed
+(and easier to measure) as 1 cup.
+Write a function that expresses an imperial volume using the largest units possible. The function will take the number of units as its first parameter, and the unit
+of measure (cup, tablespoon or teaspoon) as its second parameter. It will return a
+string representing the measure using the largest possible units as its only result. For
+example, if the function is provided with parameters representing 59 teaspoons then
+it should return the string “1 cup, 3 tablespoons, 2 teaspoons”.
+Hint: One cup is equivalent to 16 tablespoons. One tablespoon is equivalent
+to 3 teaspoons.
+
+'''
+
+def reduce_measures(amount, unit):
+    # Conversion factors
+    TEASPOONS_IN_TABLESPOON = 3
+    TABLESPOONS_IN_CUP = 16
+    
+    # Convert input to teaspoons for uniform calculations
+    if unit == "teaspoon":
+        teaspoons = amount
+    elif unit == "tablespoon":
+        teaspoons = amount * TEASPOONS_IN_TABLESPOON
+    elif unit == "cup":
+        teaspoons = amount * TEASPOONS_IN_TABLESPOON * TABLESPOONS_IN_CUP
+    else:
+        return "Invalid unit"
+    
+    # Convert to the largest units possible
+    cups = teaspoons // (TEASPOONS_IN_TABLESPOON * TABLESPOONS_IN_CUP)
+    teaspoons %= (TEASPOONS_IN_TABLESPOON * TABLESPOONS_IN_CUP)
+    
+    tablespoons = teaspoons // TEASPOONS_IN_TABLESPOON
+    teaspoons %= TEASPOONS_IN_TABLESPOON
+    
+    # Build result string
+    result = []
+    if cups:
+        result.append(f"{cups} cup" + ("s" if cups > 1 else ""))
+    if tablespoons:
+        result.append(f"{tablespoons} tablespoon" + ("s" if tablespoons > 1 else ""))
+    if teaspoons:
+        result.append(f"{teaspoons} teaspoon" + ("s" if teaspoons > 1 else ""))
+    
+    return ", ".join(result) if result else "0 teaspoons"
+
+# Example usage
+print(reduce_measures(59, "teaspoon"))  # Output: "1 cup, 3 tablespoons, 2 teaspoons"
