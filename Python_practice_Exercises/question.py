@@ -885,3 +885,24 @@ def reduce_measures(amount, unit):
 
 # Example usage
 print(reduce_measures(59, "teaspoon"))  # Output: "1 cup, 3 tablespoons, 2 teaspoons"
+
+
+
+'''
+Exercise 110: Sorted Order
+Write a program that reads integers from the user and stores them in a list. Your program should continue reading values until the user enters 0. Then it should display all of the values entered by the user (except for the 0) in ascending order, with one value appearing on each line. Use either the sort method or the sorted function to sort the list.
+
+'''
+number = []
+
+while True:
+    num = int(input("Enter the number {0 to Exit}"))
+    if num == 0:
+        break
+    number.append(num)
+
+number.sort()
+
+for num in number:
+    print(num)
+
