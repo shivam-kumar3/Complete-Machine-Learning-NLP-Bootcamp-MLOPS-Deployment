@@ -906,3 +906,41 @@ number.sort()
 for num in number:
     print(num)
 
+'''
+Exercise 113: Avoiding Duplicates
+(Solved, 21 Lines)
+In this exercise, you will create a program that reads words from the user until the
+user enters a blank line. After the user enters a blank line your program should display each word entered by the user exactly once. The words should be displayed in
+the same order that they were first entered. For example, if the user enters:
+
+first
+second
+first
+third
+second
+
+then your program should display:
+first
+second
+third
+
+
+'''
+
+def remove_dupli():
+    word = set()
+    ordered = []
+    while True:
+        words = input("Enter any words of your choice(blank for quit)").strip()
+        if words == "":
+            break
+        if words not in word:
+            word.add(words)
+            ordered.append(words)
+            
+    for word in ordered:
+        print(word)
+    
+    
+    
+remove_dupli()
