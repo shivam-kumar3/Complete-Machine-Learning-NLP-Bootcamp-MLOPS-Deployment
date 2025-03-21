@@ -113,3 +113,32 @@ np.variance
 
 print(arr7[(arr7>5) & (arr7 < 10)])
 
+
+number = np.array([1,2,3,4,5,6,7,8,9,10])
+even_num = number[number % 2 == 0]
+
+print(number)
+print(even_num)
+
+# Filter with mask 
+
+mask = number > 5
+print(number[mask])
+
+# Fancy indexing vs np.where()
+
+print("-----------------")
+indices = [0,3,5]
+
+print(number[indices])
+
+print("-----------------")
+where_result = np.where(number>5)
+print(number[where_result])
+print(where_result)
+
+
+# Condition array
+
+condition_array = np.where(number > 5 , number , number)
+print(condition_array)

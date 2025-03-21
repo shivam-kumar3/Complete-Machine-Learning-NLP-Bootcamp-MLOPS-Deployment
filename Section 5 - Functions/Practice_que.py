@@ -60,3 +60,11 @@ def SumAll(*args):
 
 
 print(SumAll(1,2,3,4,5,6,7,7,42))
+
+
+def greet():
+    print("Hello")
+    greet()
+
+
+ 
