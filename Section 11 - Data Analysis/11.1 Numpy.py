@@ -142,3 +142,29 @@ print(where_result)
 
 condition_array = np.where(number > 5 , number , number)
 print(condition_array)
+
+# ADDING AND REMOVING DATA
+
+arr = np.array([1,2,3])
+arr2 = np.array([4,5,6])
+
+combined = np.concatenate(([[arr,arr2]]))
+print(combined)
+
+print(combined.ndim)
+
+
+original = np.array([[1,2],[3,4]])
+new_row = np.array([[5,6]])
+
+new = np.concatenate((original,new_row))
+stack = np.vstack((original,new_row))
+print(stack)
+print('-------------')
+print(new)
+
+print('----------------')
+new_col = [[7],[8]]
+hstack = np.hstack((original,new_col))
+print(hstack)
+
