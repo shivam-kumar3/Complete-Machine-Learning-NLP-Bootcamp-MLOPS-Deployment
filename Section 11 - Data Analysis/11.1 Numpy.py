@@ -168,3 +168,30 @@ new_col = [[7],[8]]
 hstack = np.hstack((original,new_col))
 print(hstack)
 
+
+# Delete command using the index
+
+arr = np.array([1,2,3,4,5,6,7])
+deleted = np.delete(arr,2)
+print(deleted)
+
+
+# PRACTICAL QUESTIONS
+
+import matplotlib.pyplot as plt
+
+# Data Structure : [resturant_id , 2021,2022,2023,2024]
+sales_data = np.array([
+    [1,150000,180000,220000,250000],  #Paradise Biryani
+    [2,120000,140000,160000,190000],   #Beijing Bites
+    [3,200000,230000,260000,300000], #Pizza Hub
+    [4,180000,210000,240000,270000],  #Burger Point
+    [5,160000,185000,205000,230000] #chai point
+    ])
+
+
+print('< ---------- Zomato Sales Analysis ---------- >')
+print('\nSales Data Shape', sales_data.shape)
+
+# 1st three restro sales data
+print("Sample data for 1st 3 restro:- \n", sales_data[:3])
