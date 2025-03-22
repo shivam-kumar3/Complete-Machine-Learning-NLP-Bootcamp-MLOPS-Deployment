@@ -95,3 +95,28 @@ print(pd_data)
 
 pd_data.drop(0)
 
+print('-----------------')
+
+print(pd_data)
+
+
+
+salary = [10000,20000,30000,50000]
+
+
+pd_data['Salary'] = salary
+
+print(pd_data)
+
+pd_data.loc[len(pd_data)] = ["sohan", 27, "Finance",20000]
+
+
+print('-----------------')
+
+print(pd_data)
+
+pd_data.loc[len(pd_data)] = ["radhe", 20, "Data",20000]
+
+print('-----------------')
+
+print(pd_data)
