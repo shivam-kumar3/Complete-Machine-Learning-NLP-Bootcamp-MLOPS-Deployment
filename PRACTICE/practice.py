@@ -302,3 +302,35 @@ print(names_with_r)
 name_r = [i for i in names if 'r' in i]
 print(name_r)
 
+
+'''
+Exercise 115: List of Proper Divisors
+(36 Lines)
+A proper divisor of a positive integer, n, is a positive integer less than n which divides
+evenly into n. Write a function that computes all of the proper divisors of a positive
+integer. The integer will be passed to the function as its only parameter. The function
+will return a list containing all of the proper divisors as its only result. Complete
+this exercise by writing a main program that demonstrates the function by reading
+a value from the user and displaying the list of its proper divisors. Ensure that your
+main program only runs when your solution has not been imported into another file.
+
+'''
+
+
+def proper_divisors(n):
+    """Return a list of all proper divisors of n."""
+    return [i for i in range(1, n) if n % i == 0]
+
+
+def main():
+    num = int(input("Enter a positive integer: "))
+    if num <= 0:
+        print("Please enter a positive integer.")
+        return
+    
+    divisors = proper_divisors(num)
+    print(f"Proper divisors of {num}: {divisors}")
+
+
+if __name__ == "__main__":
+    main()
