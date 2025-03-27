@@ -334,3 +334,49 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+'''
+
+Exercise 119: Below and Above Average
+(44 Lines)
+Write a program that reads numbers from the user until a blank line is entered. Your
+program should display the average of all of the values entered by the user. Then
+the program should display all of the below average values, followed by all of the
+average values (if any), followed by all of the above average values. An appropriate
+label should be displayed before each list of values.
+'''
+
+def classify_numbers():
+    numbers = []
+    
+    # Read numbers from the user
+    while True:
+        user_input = input("Enter a number (or press Enter to finish): ")
+        if user_input == "":
+            break
+        try:
+            num = float(user_input)
+            numbers.append(num)
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+    
+    if not numbers:
+        print("No numbers were entered.")
+        return
+    
+    # Calculate the average
+    average = sum(numbers) / len(numbers)
+    print(f"\nAverage: {average:.2f}\n")
+    
+    # Classify numbers
+    below_avg = [num for num in numbers if num < average]
+    equal_avg = [num for num in numbers if num == average]
+    above_avg = [num for num in numbers if num > average]
+    
+    # Display results
+    print("Below average values:", below_avg if below_avg else "None")
+    print("Equal to average values:", equal_avg if equal_avg else "None")
+    print("Above average values:", above_avg if above_avg else "None")
+
+classify_numbers()
