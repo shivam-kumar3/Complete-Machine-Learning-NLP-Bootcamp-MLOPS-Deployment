@@ -380,3 +380,24 @@ def classify_numbers():
     print("Above average values:", above_avg if above_avg else "None")
 
 classify_numbers()
+
+'''
+Exercise 121: Random Lottery Numbers
+(Solved, 28 Lines)
+In order to win the top prize in a particular lottery, one must match all 6 numbers
+on his or her ticket to the 6 numbers between 1 and 49 that are drawn by the lottery
+organizer. Write a program that generates a random selection of 6 numbers for a
+lottery ticket. Ensure that the 6 numbers selected do not contain any duplicates.
+Display the numbers in ascending order.
+
+'''
+
+import random
+
+def generate_lottery_numbers():
+    numbers = random.sample(range(1, 50), 6)  # Generate 6 unique numbers
+    numbers.sort()  # Sort in ascending order
+    return numbers
+
+lottery_numbers = generate_lottery_numbers()
+print("Your lottery numbers are:", lottery_numbers)
