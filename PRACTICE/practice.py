@@ -401,3 +401,82 @@ def generate_lottery_numbers():
 
 lottery_numbers = generate_lottery_numbers()
 print("Your lottery numbers are:", lottery_numbers)
+
+'''
+Exercise 136: Reverse Lookup
+(Solved, 45 Lines)
+Write a function named reverseLookup that finds all of the keys in a dictionary
+that map to a specific value. The function will take the dictionary and the value to
+search for as its only parameters. It will return a (possibly empty) list of keys from
+the dictionary that map to the provided value.
+Include a main program that demonstrates the reverseLookup function as part
+of your solution to this exercise. Your program should create a dictionary and then
+show that the reverseLookup function works correctly when it returns multiple
+keys, a single key, and no keys. Ensure that your main program only runs when
+the file containing your solution to this exercise has not been imported into another
+program.
+'''
+
+def reverseLookup(d, value):
+    """Finds all keys in the dictionary that map to a specific value."""
+    return [key for key, val in d.items() if val == value]
+
+def main():
+    # Example dictionary
+    sample_dict = {
+        'a': 1,
+        'b': 2,
+        'c': 1,
+        'd': 3,
+        'e': 2
+    }
+    
+    # Test cases
+    print("Keys mapping to 1:", reverseLookup(sample_dict, 1))  # Should return ['a', 'c']
+    print("Keys mapping to 2:", reverseLookup(sample_dict, 2))  # Should return ['b', 'e']
+    print("Keys mapping to 3:", reverseLookup(sample_dict, 3))  # Should return ['d']
+    print("Keys mapping to 4:", reverseLookup(sample_dict, 4))  # Should return []
+
+main()
+
+'''
+Exercise 141: Write out Numbers in English
+(65 Lines)
+While the popularity of cheques as a payment method has diminished in recent years,
+some companies still issue them to pay employees or vendors. The amount being
+paid normally appears on a cheque twice, with one occurrence written using digits,
+and the other occurrence written using English words. Repeating the amount in two
+different forms makes it much more difficult for an unscrupulous employee or vendor
+to modify the amount on the cheque before depositing it.
+In this exercise, your task is to create a function that takes an integer between 0 and
+999 as its only parameter, and returns a string containing the English words for that
+number. For example, if the parameter to the function is 142 then your function should
+return “one hundred forty two”. Use one or more dictionaries to implement
+your solution rather than large if/elif/else constructs. Include a main program that
+reads an integer from the user and displays its value in English words.
+
+'''
+
+def number_to_words(n):
+    """Converts an integer (0-999) to its English words representation."""
+    if not (0 <= n <= 999):
+        return "Number out of range"
+    
+    ones = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+    teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+    tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+    
+    if n < 10:
+        return ones[n]
+    elif 10 <= n < 20:
+        return teens[n - 10]
+    elif 20 <= n < 100:
+        return tens[n // 10] + (" " + ones[n % 10] if n % 10 != 0 else "")
+    else:
+        return ones[n // 100] + " hundred" + (" " + number_to_words(n % 100) if n % 100 != 0 else "")
+
+def main():
+    num = int(input("Enter a number (0-999): "))
+    print("In words:", number_to_words(num))
+
+main()
