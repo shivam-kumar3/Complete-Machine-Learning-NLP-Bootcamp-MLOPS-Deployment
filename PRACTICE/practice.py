@@ -480,3 +480,42 @@ def main():
     print("In words:", number_to_words(num))
 
 main()
+
+'''
+Create a program that determines and displays the number of unique characters in a
+string entered by the user. For example, Hello, World! has 10 unique characters
+while zzz has only one unique character. Use a dictionary or set to solve this problem.
+
+'''
+
+def Unique(s):
+    unique_char = set(s)
+    return len(unique_char)
+
+user = input("Enter the word")
+unique_count = Unique(user)
+
+print(f"The total number of unique character is {unique_count}")
+
+
+'''
+Exercise 143: Anagrams
+
+Two words are anagrams if they contain all of the same letters, but in a different
+order. For example, “evil” and “live” are anagrams because each contains one “e”,
+one “i”, one “l”, and one “v”. Create a program that reads two strings from the user,
+determines whether or not they are anagrams, and reports the result.
+
+'''
+def are_anagrams(word1, word2):
+    return sorted(word1.lower()) == sorted(word2.lower())
+
+# Input
+word1 = input("Enter first word: ")
+word2 = input("Enter second word: ")
+
+# Check and output result
+if are_anagrams(word1, word2):
+    print("The words are anagrams.")
+else:
+    print("The words are not anagrams.")
