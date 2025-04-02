@@ -519,3 +519,32 @@ if are_anagrams(word1, word2):
     print("The words are anagrams.")
 else:
     print("The words are not anagrams.")
+
+
+'''
+Exercise 31: Units of Pressure
+(20 Lines)
+In this exercise you will create a program that reads a pressure from the user in kilopascals. Once the pressure has been read your program should report the equivalent
+pressure in pounds per square inch, millimeters of mercury and atmospheres. Use
+your research skills to determine the conversion factors between these units.
+
+
+'''
+
+def convert_pressure(kpa):
+    psi = kpa * 0.145038  # 1 kPa = 0.145038 psi
+    mmHg = kpa * 7.50062  # 1 kPa = 7.50062 mmHg
+    atm = kpa * 0.00986923  # 1 kPa = 0.00986923 atm
+    
+    return psi, mmHg, atm
+
+# Read pressure from user
+kpa = float(input("Enter pressure in kilopascals: "))
+
+# Convert to other units
+psi, mmHg, atm = convert_pressure(kpa)
+
+# Display the results
+print(f"Pressure in pounds per square inch: {psi:.4f} psi")
+print(f"Pressure in millimeters of mercury: {mmHg:.4f} mmHg")
+print(f"Pressure in atmospheres: {atm:.4f} atm")
