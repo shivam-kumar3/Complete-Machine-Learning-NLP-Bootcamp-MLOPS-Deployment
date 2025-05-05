@@ -971,3 +971,78 @@ else:
         print("Sometimes y is a vowel, and sometimes y is a consonant.")
     else:
         print(f"{letter} is a consonant.")
+
+
+
+
+# ✅ Create a list of squares from 1 to 10.
+
+
+square = [i**2 for i in range(1,10)]
+
+print(square)
+# ✅ Get all even numbers from a list:
+nums = [1, 4, 5, 6, 9, 12, 15]
+
+even = [ i for i in nums if i %2 == 0]
+
+print(even)
+
+# ✅ Convert all strings to lowercase:
+names = ["Alice", "BOB", "Charlie"]
+
+lower = [i.lower() for i in names]
+
+print(lower)
+
+# ✅ Get lengths of all words in a list:
+words = ["apple", "banana", "kiwi"]
+
+lengthh = [len(i) for i in words]
+
+print(lengthh)
+# ✅ Replace negative numbers with 0:
+nums = [4, -1, 0, -3, 9]
+
+zero = [i if i >=0 else 0 for i in nums ]
+
+print(zero)
+
+# ✅ Create a list of tuples: (number, square) for numbers from 1 to 5
+# ➤ Output: [(1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]
+
+
+resultt = [(i,i**2) for i in range(1,6)]
+
+print(resultt)
+
+# ✅ Filter names that start with 'A':
+names = ["Ankit", "Bob", "Arjun", "Charlie"]
+
+filterr = [i for i in names if i.startswith('A')]
+print(filterr)
+
+# ✅ Add 5% tax only if amount > 500
+bills = [200, 450, 600, 750]
+# ➤ Output: [200, 450, 630.0, 787.5]
+
+tax = [i + i*0.05 if i > 500 else i  for i in bills]
+
+print(tax)
+
+
+# ✅ Flatten a 2D list:
+matrix = [[1, 2], [3, 4], [5, 6]]
+# ➤ Output: [1, 2, 3, 4, 5, 6]
+flat = [j for i in matrix for j in i]
+
+print(flat)
+
+
+# ✅ Reverse strings longer than 3 characters, else keep as-is:
+words = ["hi", "hello", "to", "world"]
+# ➤ Output: ['hi', 'olleh', 'to', 'dlrow']
+
+reversee = [i[::-1] if len(i) > 3 else i for i in words]
+
+print(reversee)
