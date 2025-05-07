@@ -1057,3 +1057,86 @@ print(reversee)
 sqaure_dict = {i: i** 2 for i in range(1,6)}
 
 print(sqaure_dict)
+
+
+# Create a dictionary:
+# Write a Python program to create a dictionary where keys are numbers from 1 to 5 and values are their squares.
+sqaure_dict = {i: i** 2 for i in range(1,6)}
+
+print(sqaure_dict)
+
+# Access dictionary values:
+# Given a dictionary 
+# person = {'name': 'Alice', 'age': 25, 'city': 'New York'},
+# write code to print the value of the key 'city'.
+
+person = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+print(person['city'])
+
+
+'''
+Add and update values:
+Add a new key 'gender': 'female' to the dictionary above and update 'age' to 26.
+'''
+person['gender'] = 'female'
+person['age'] = 26
+
+print(person)
+
+# Check key existence:
+# Write a function that takes a dictionary and a key, 
+# and returns True if the key exists, else False.
+
+
+def key_exists(dictionary, key):
+    return key in dictionary
+    
+    
+my_dict = {1: 1, 2: 4, 3: 9}
+print(key_exists(my_dict, 2))  # Output: True
+print(key_exists(my_dict, 5))  # Output: False
+
+'''
+Iterate through a dictionary:
+Write a program to print each key and value from a given dictionary using a for loop.
+
+'''
+for key, value in my_dict.items():
+    print('Keys:',key, "Value:", value)
+
+'''
+Count word frequency:
+Write a Python function that takes a string and returns a dictionary with word frequencies.
+
+'''
+
+def word(string):
+    freq = {}
+    word = string.split()
+    for i in word:
+        if i in freq:
+            freq[i] += 1 
+        else:
+            freq[i] = 1
+    print(freq)
+            
+word('this is the best best vada vada pao')
+
+# Merge two dictionaries:
+# Write a Python function to merge the following dictionaries:
+
+d1 = {'a': 100, 'b': 200}  
+d2 = {'x': 300, 'y': 200}
+
+d1.update(d2)
+
+print(d1)
+            
+# Sort dictionary by value:
+# Given a dictionary 
+# sort it by value in descending order.
+scores = {'John': 70, 'Alice': 85, 'Bob': 60}, 
+
+
+
+
