@@ -1046,3 +1046,14 @@ words = ["hi", "hello", "to", "world"]
 reversee = [i[::-1] if len(i) > 3 else i for i in words]
 
 print(reversee)
+
+
+
+# Dictionary 
+
+# Create a dictionary:
+# Write a Python program to create a dictionary where keys are numbers from 1 to 5 and values are their squares.
+
+sqaure_dict = {i: i** 2 for i in range(1,6)}
+
+print(sqaure_dict)
