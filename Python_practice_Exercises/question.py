@@ -1137,6 +1137,36 @@ print(d1)
 # sort it by value in descending order.
 scores = {'John': 70, 'Alice': 85, 'Bob': 60}, 
 
+s = "hello"
+print(s[::-1])  # Output: "olleh"
 
 
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+
+
+a, b = 5, 10
+a, b = b, a
+
+
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        print(a, end=' ')
+        a, b = b, a + b
+
+
+d = {'a': 3, 'b': 1, 'c': 2}
+sorted_d = dict(sorted(d.items(), key=lambda item: item[1]))
 
