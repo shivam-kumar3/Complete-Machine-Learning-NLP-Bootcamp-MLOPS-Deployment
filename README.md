@@ -28,24 +28,6 @@ I'm documenting everything I'm learning, building, and practicing — from core 
 
 ---
 
-## 🗂️ Repository Structure
-
-```bash
-.
-├── README.md
-├── ML_Basics/
-├── Math_for_ML/
-├── NLP_Projects/
-├── Deep_Learning/
-├── MLOps/
-│   ├── Docker/
-│   └── MLflow/
-├── Deployment/
-│   └── Streamlit_Apps/
-└── Datasets/
-
-
-
 🔧 Tools & Libraries I'm Using
 Programming: Python
 
