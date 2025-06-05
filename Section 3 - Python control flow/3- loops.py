@@ -92,7 +92,30 @@ for i in range(1,101):
         else:
             print(i)
 
+
+
 '''
+Write a Python program that prints the sum of all even numbers from 1 to 100 (inclusive), using a loop.
+'''
+def sumofall(number):
+    total = 0
+    for i in range(number+1):
+        if i % 2 == 0:
+            total += i
+    print(total)
+
+
+
+sumofall(100)
+# 
+
+
+
+
+'''
+
+
+
 conclusion 
 loops are powerul constructs in python that allow you to executes a block of code multiple times .
 by understanding and using for and while loops, along with looop control statement like break, continue and pass, we can handle wide range of programming task efficiently 
