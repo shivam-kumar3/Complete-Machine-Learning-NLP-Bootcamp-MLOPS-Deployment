@@ -195,3 +195,22 @@ print('\nSales Data Shape', sales_data.shape)
 
 # 1st three restro sales data
 print("Sample data for 1st 3 restro:- \n", sales_data[:3])
+
+
+
+'''
+Create a NumPy array of integers from 10 to 50 (inclusive), and then extract only the even numbers from it.
+
+Bonus: Reshape the resulting even numbers into a 2D array with 2 rows.
+
+'''
+
+num = np.array(range(10,50))
+even_arr = num[num % 2 == 0]
+
+reshaped = even_arr.reshape(2,-1)
+print(reshaped)
+
+
+
+
