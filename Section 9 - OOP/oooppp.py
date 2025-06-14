@@ -20,3 +20,16 @@ class Addition:
 
 obj = Addition(12,34)
 obj
+
+
+
+class Factory:
+    a = 14
+
+    def welcome(self):
+        print('Hello how are you')
+
+    print('I am getting initialized')
+
+
+print(Factory().a)
