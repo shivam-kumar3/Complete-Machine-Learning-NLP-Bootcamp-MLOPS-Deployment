@@ -121,3 +121,45 @@ def Ticketprice():
 Ticketprice()
     
 
+
+# PRACTICE QUESTION
+
+'''
+Question:
+Write a program that asks the user to enter their age.
+
+If the age is less than 18, print "You are a minor."
+
+If the age is 18 or above but less than 60, print "You are an adult."
+
+If the age is 60 or above, print "You are a senior citizen."
+
+'''
+
+user = int(input("Enter your age?"))
+
+if user < 18:
+    print("You are Minor")
+if user >= 18 and user < 60:
+    print("You are an adult ")
+if user >= 60:
+    print("You are a senior citizen")
+
+
+'''
+Question:
+
+Write a program that asks the user to enter a number.
+
+If the number is even, print "The number is even."
+
+Else, print "The number is odd."
+
+'''
+
+user = int(input("Enter any number"))
+
+if user % 2== 0:
+    print("The number is even")
+else:
+    print("The number is odd")
