@@ -163,3 +163,21 @@ if user % 2== 0:
     print("The number is even")
 else:
     print("The number is odd")
+
+
+'''
+Write a program that asks the user to enter a number.
+
+If the number is positive, print "The number is positive."
+
+Else, print "The number is negative or zero."
+
+
+'''
+
+num = int(input("Enter a number"))
+          
+if num > 0:
+    print("Number is Positive")
+else:
+    print('Number is negative or zero')
