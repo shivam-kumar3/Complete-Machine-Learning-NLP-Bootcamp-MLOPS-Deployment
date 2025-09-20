@@ -181,3 +181,63 @@ if num > 0:
     print("Number is Positive")
 else:
     print('Number is negative or zero')
+
+
+
+'''
+Question:
+
+Write a program that asks the user to enter a number.
+
+If the number is positive, print "The number is positive."
+
+If the number is negative, print "The number is negative."
+
+Else (i.e., the number is zero), print "The number is zero."
+
+
+
+'''
+
+user = int(input('Enter a number'))
+
+if user == 0:
+    print("number is 0")
+elif user > 0:
+    print('Number is positive')
+else:
+    print('Number is negative')
+
+
+'''
+Question (Nested if):
+
+Write a program that asks the user to enter their marks (0–100).
+
+If the marks are greater than or equal to 90, print "Grade: A+".
+
+Else, check if marks are greater than or equal to 75:
+
+If yes, print "Grade: A"
+
+Else, check if marks are greater than or equal to 60:
+
+If yes, print "Grade: B"
+
+Else, print "Grade: C"
+
+Hint: Use nested if inside the else.
+
+'''
+
+marks = int(input('Enter the marks'))
+
+if marks >= 90:
+    print("Grade: A+")
+else:
+    if marks >= 75:
+        print('Grade :A')
+    elif marks >= 60:
+        print("Grade : B")
+    else:
+        print("Grade : C ")
