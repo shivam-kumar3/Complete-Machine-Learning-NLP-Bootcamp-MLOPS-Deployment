@@ -1,20 +1,26 @@
 '''
 POLYMORPHISM (multiple forms)
 
-POLY is a core concept in oop that  allows objects of different classes to be treated as objects of a common superclass. it providesa way to perform a single action in different forms. 
+POLY is a core concept in oop that  allows objects of different classes to be treated as objects of a common superclass. it provides way to perform a single action in different forms. 
 
 polymorphism is typically acheived through method overriding and interfaces
 
 '''
+# Method overriding
+# Method overriding allows a child class to provide a specific implementation of a method that is already defined in its parent class
 
+# base class
 class Animal:
     def speak(self):
-        print('SOund of the animal')
+        print('Sound of the animal')
 
+
+# Derived class 1
 class dog(Animal):
     def speak(self):
         print('woof')
 
+# Derived class 2
 class cat(Animal):
     def speak(self):
         print("Meoowww")
