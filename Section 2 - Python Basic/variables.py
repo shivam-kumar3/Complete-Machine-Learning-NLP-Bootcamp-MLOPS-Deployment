@@ -1,113 +1,162 @@
-# %%
-# 1. What is a Variable
-x = 10
-name = "Shivam"
-print(x, name)
+# =====================================================
+# PYTHON OPERATORS 
+# =====================================================
 
-# %%
-# 2. Variable Naming Rules
-valid_var = 10
-_valid = 20
-var_1 = 30
-print(valid_var, _valid, var_1)
 
-# %%
-# 3. Multiple Assignment
-a, b, c = 1, 2, 3
-print(a, b, c)
+# -----------------------------------------------------
+# 1. Arithmetic Operators
+# -----------------------------------------------------
 
-# %%
-# 4. Same Value Assignment
-x = y = z = 100
-print(x, y, z)
-
-# %%
-# 5. Dynamic Typing
-x = 10
-print(type(x))
-x = "Data Science"
-print(type(x))
-
-# %%
-# 6. Common Variable Types
 a = 10
-b = 3.14
-c = "Python"
-d = True
-e = None
-print(type(a), type(b), type(c), type(d), type(e))
+b = 3
 
-# %%
-# 7. Type Conversion
-x = "100"
-x = int(x)
-print(x, type(x))
+print(a + b)    # Addition
+print(a - b)    # Subtraction
+print(a * b)    # Multiplication
+print(a / b)    # Division (float)
+print(a // b)   # Floor Division
+print(a % b)    # Modulus
+print(a ** b)   # Exponentiation
 
-# %%
-# 8. Variable Reassignment
+
+# -----------------------------------------------------
+# 2. Comparison (Relational) Operators
+# -----------------------------------------------------
+
 x = 10
-x = x + 5
-print(x)
-
-# %%
-# 9. Local Scope
-def func():
-    x = 10
-    print(x)
-func()
-
-# %%
-# 10. Global Scope
-x = 20
-def func():
-    print(x)
-func()
-
-# %%
-# 11. global keyword
-x = 5
-def func():
-    global x
-    x = 10
-func()
-print(x)
-
-# %%
-# 12. Immutable Example
-x = 10
-y = x
 y = 20
-print(x, y)
 
-# %%
-# 13. Mutable Example
+print(x == y)   # Equal to
+print(x != y)   # Not equal to
+print(x > y)    # Greater than
+print(x < y)    # Less than
+print(x >= y)   # Greater than or equal to
+print(x <= y)   # Less than or equal to
+
+
+# -----------------------------------------------------
+# 3. Assignment Operators
+# -----------------------------------------------------
+
+a = 10
+a += 5
+print(a)
+
+a -= 3
+print(a)
+
+a *= 2
+print(a)
+
+a /= 4
+print(a)
+
+a //= 2
+print(a)
+
+a %= 3
+print(a)
+
+a **= 2
+print(a)
+
+
+# -----------------------------------------------------
+# 4. Logical Operators
+# -----------------------------------------------------
+
+x = True
+y = False
+
+print(x and y)
+print(x or y)
+print(not x)
+
+
+# -----------------------------------------------------
+# 5. Bitwise Operators
+# -----------------------------------------------------
+
+a = 5      # 101
+b = 3      # 011
+
+print(a & b)   # AND
+print(a | b)   # OR
+print(a ^ b)   # XOR
+print(~a)      # NOT
+print(a << 1)  # Left shift
+print(a >> 1)  # Right shift
+
+
+# -----------------------------------------------------
+# 6. Membership Operators
+# -----------------------------------------------------
+
+nums = [1, 2, 3, 4]
+
+print(2 in nums)
+print(5 not in nums)
+
+
+# -----------------------------------------------------
+# 7. Identity Operators
+# -----------------------------------------------------
+
 a = [1, 2, 3]
 b = a
-b.append(4)
-print(a, b)
+c = [1, 2, 3]
 
-# %%
-# 14. Object Identity
-x = 10
+print(a is b)
+print(a is c)
+print(a is not c)
+
+
+# -----------------------------------------------------
+# 8. Operator Precedence
+# -----------------------------------------------------
+
+result = 10 + 3 * 2 ** 2
+print(result)
+
+# Precedence order:
+# ** → * / // % → + -
+
+
+# -----------------------------------------------------
+# 9. Short-Circuit Evaluation
+# -----------------------------------------------------
+
+x = 0
 y = 10
-print(id(x), id(y))
 
-# %%
-# 15. Constants (Convention)
-PI = 3.14159
-GRAVITY = 9.8
-print(PI, GRAVITY)
+print(x != 0 and y / x > 1)   # Safe due to short-circuit
+print(x == 0 or y / x > 1)    # Safe due to short-circuit
 
-# %%
-# 16. Delete Variable
-x = 100
-del x
 
-# %%
-# 17. Python Keywords
-import keyword
-print(keyword.kwlist)
+# -----------------------------------------------------
+# 10. Ternary (Conditional) Operator
+# -----------------------------------------------------
 
-# %%
-# 18. Unpacking
-data =
+age = 20
+status = "Adult" if age >= 18 else "Minor"
+print(status)
+
+
+# -----------------------------------------------------
+# 11. Operator Overloading (Intro Example)
+# -----------------------------------------------------
+
+print(10 + 20)
+print("Data" + "Science")
+print([1, 2] + [3, 4])
+
+
+# -----------------------------------------------------
+# 12. Common Operator Pitfalls (Interview)
+# -----------------------------------------------------
+
+print(0 == False)    # True
+print(0 is False)    # False
+
+print([] == False)  # False
+print([] is False)  # False
