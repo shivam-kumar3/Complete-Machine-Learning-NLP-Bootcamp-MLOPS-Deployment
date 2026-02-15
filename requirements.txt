@@ -2,8 +2,13 @@ numpy
 pandas
 matplotlib
 seaborn
-flask
-memory_profiler
-streamlit
 scikit-learn
-
+xgboost
+statsmodels
+tensorflow
+torch
+nltk
+spacy
+opencv-python
+flask
+fastapi
